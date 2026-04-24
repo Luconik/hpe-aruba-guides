@@ -223,3 +223,126 @@ The remediate.sh script via direct AOS-CX REST API is the validated operational 
 ## License / Licence
 
 MIT - HPE Aruba Networking Presales, 2026
+
+---
+
+## Deploiement containerise / Container deployment
+
+### Francais
+
+#### Prerequis
+
+- Docker + Docker Compose installes sur le serveur listener
+- Acces reseau au switch depuis le serveur Docker
+
+#### Structure
+
+    cnx-pki-remediation/
+    ├── Dockerfile
+    ├── docker-compose.yml
+    ├── scripts/
+    │   ├── remediate.sh
+    │   └── listener.sh
+    ├── certs/
+    │   └── ca.pem
+    └── config/
+        └── settings.env
+
+#### Dockerfile
+
+    FROM alpine:3.19
+    RUN apk add --no-cache bash curl netcat-openbsd python3
+    COPY scripts/ /scripts/
+    RUN chmod +x /scripts/*.sh
+    EXPOSE 8080
+    CMD ["/scripts/listener.sh"]
+
+#### docker-compose.yml
+
+    services:
+      ta-remediation:
+        build: .
+        container_name: ta-remediation
+        restart: unless-stopped
+        ports:
+          - "8080:8080"
+        volumes:
+          - ./certs:/certs:ro
+          - ./config/settings.env:/config/settings.env:ro
+        env_file:
+          - config/settings.env
+
+#### Configuration NPM (Nginx Proxy Manager)
+
+Creer un Proxy Host dans NPM :
+- Domain : webhook.exemple.fr
+- Scheme : http
+- Forward Hostname : localhost
+- Forward Port : 8080
+- Path : /webhook/cnx
+
+#### Demarrage
+
+    docker compose up -d
+    docker compose logs -f
+
+---
+
+### English
+
+#### Prerequisites
+
+- Docker + Docker Compose installed on the listener server
+- Network access to the switch from the Docker server
+
+#### Structure
+
+    cnx-pki-remediation/
+    ├── Dockerfile
+    ├── docker-compose.yml
+    ├── scripts/
+    │   ├── remediate.sh
+    │   └── listener.sh
+    ├── certs/
+    │   └── ca.pem
+    └── config/
+        └── settings.env
+
+#### Dockerfile
+
+    FROM alpine:3.19
+    RUN apk add --no-cache bash curl netcat-openbsd python3
+    COPY scripts/ /scripts/
+    RUN chmod +x /scripts/*.sh
+    EXPOSE 8080
+    CMD ["/scripts/listener.sh"]
+
+#### docker-compose.yml
+
+    services:
+      ta-remediation:
+        build: .
+        container_name: ta-remediation
+        restart: unless-stopped
+        ports:
+          - "8080:8080"
+        volumes:
+          - ./certs:/certs:ro
+          - ./config/settings.env:/config/settings.env:ro
+        env_file:
+          - config/settings.env
+
+#### NPM (Nginx Proxy Manager) configuration
+
+Create a Proxy Host in NPM:
+- Domain: webhook.example.com
+- Scheme: http
+- Forward Hostname: localhost
+- Forward Port: 8080
+- Path: /webhook/cnx
+
+#### Start
+
+    docker compose up -d
+    docker compose logs -f
+
