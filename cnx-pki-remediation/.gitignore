@@ -1,0 +1,9 @@
+config/settings.env
+certs/ca.pem
+certs/*.key
+certs/*.crt
+certs/*.pem
+*.deb
+/tmp/
+_pycache_/
+*.pyc
