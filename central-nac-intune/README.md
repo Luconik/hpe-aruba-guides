@@ -58,7 +58,8 @@ Accès réseau accordé (rôle selon politique NAC)
 central-nac-intune/
 ├── README.md               ← Ce fichier / This file
 ├── windows/
-│   ├── README.md           ← Guide Windows (FR + EN)
+│   ├── README.md           ← Guide Windows (EN)
+│   ├── README-fr.md        ← Guide Windows (FR)
 │   └── screenshots/        ← Captures 00 → 70
 ├── macos/
 │   ├── README.md           ← Guide macOS (EN)
@@ -127,7 +128,8 @@ Network access granted (role per NAC policy)
 central-nac-intune/
 ├── README.md               ← This file / Ce fichier
 ├── windows/
-│   ├── README.md           ← Windows guide (FR + EN)
+│   ├── README.md           ← Windows guide (EN)
+│   ├── README-fr.md        ← Windows guide (FR)
 │   └── screenshots/        ← Screenshots 00 → 70
 ├── macos/
 │   ├── README.md           ← macOS guide (EN)
