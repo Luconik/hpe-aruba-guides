@@ -250,27 +250,27 @@ Télécharger le `.pkg` Company Portal depuis Microsoft :
 https://go.microsoft.com/fwlink/?linkid=853070
 ```
 
-![Company Portal - Téléchargement de l'installeur](screenshots/fr/99-macos-cp-installer-download.png)
+![Company Portal - Téléchargement de l'installeur](screenshots/99-macos-cp-installer-download.png)
 
 Lancer l'installeur et suivre l'assistant.
 
-![Company Portal - Introduction](screenshots/fr/100-macos-cp-install-intro-fr.png)
+![Company Portal - Introduction](screenshots/100-macos-cp-install-intro.png)
 
-![Company Portal - Contrat de licence](screenshots/fr/101-macos-cp-install-license-fr.png)
+![Company Portal - Contrat de licence](screenshots/101-macos-cp-install-license.png)
 
-![Company Portal - Accepter la licence](screenshots/fr/102-macos-cp-install-license-agree-fr.png)
+![Company Portal - Accepter la licence](screenshots/102-macos-cp-install-license-agree.png)
 
-![Company Portal - Type d'installation](screenshots/fr/103-macos-cp-install-type-fr.png)
+![Company Portal - Type d'installation](screenshots/103-macos-cp-install-type.png)
 
 S'authentifier avec Touch ID ou mot de passe pour autoriser l'installation.
 
-![Company Portal - Authentification](screenshots/fr/104-macos-cp-install-auth-fr.png)
+![Company Portal - Authentification](screenshots/104-macos-cp-install-auth.png)
 
-![Company Portal - Installation réussie](screenshots/fr/105-macos-cp-install-success-fr.png)
+![Company Portal - Installation réussie](screenshots/105-macos-cp-install-success.png)
 
 Placer l'installeur dans la corbeille lorsque demandé.
 
-![Company Portal - Placer dans la corbeille](screenshots/fr/106-macos-cp-install-trash-installer-fr.png)
+![Company Portal - Placer dans la corbeille](screenshots/106-macos-cp-install-trash-installer.png)
 
 ---
 

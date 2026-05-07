@@ -254,23 +254,23 @@ https://go.microsoft.com/fwlink/?linkid=853070
 
 Run the installer and follow the wizard.
 
-![Company Portal - Introduction](screenshots/100-macos-cp-install-intro.png)
+![Company Portal - Introduction](screenshots/fr/100-macos-cp-install-intro-fr.png)
 
-![Company Portal - License agreement](screenshots/101-macos-cp-install-license.png)
+![Company Portal - License agreement](screenshots/fr/101-macos-cp-install-license-fr.png)
 
-![Company Portal - Accept license](screenshots/102-macos-cp-install-license-agree.png)
+![Company Portal - Accept license](screenshots/fr/102-macos-cp-install-license-agree-fr.png)
 
-![Company Portal - Installation type](screenshots/103-macos-cp-install-type.png)
+![Company Portal - Installation type](screenshots/fr/103-macos-cp-install-type-fr.png)
 
 Authenticate with Touch ID or password to authorize the installation.
 
-![Company Portal - Authentication](screenshots/104-macos-cp-install-auth.png)
+![Company Portal - Authentication](screenshots/fr/104-macos-cp-install-auth-fr.png)
 
-![Company Portal - Installation successful](screenshots/105-macos-cp-install-success.png)
+![Company Portal - Installation successful](screenshots/fr/105-macos-cp-install-success-fr.png)
 
 Move the installer to Trash when prompted.
 
-![Company Portal - Move installer to Trash](screenshots/106-macos-cp-install-trash-installer.png)
+![Company Portal - Move installer to Trash](screenshots/fr/106-macos-cp-install-trash-installer-fr.png)
 
 ---
 
