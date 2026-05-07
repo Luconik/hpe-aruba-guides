@@ -629,79 +629,23 @@ Screenshots: `68` → `70`.
 
 ```
 central-nac-intune/
-├── README.md                                           ← This file / Ce fichier
-└── screenshots/
-    ├── 00-aruba-central-nac-banner.png
-    ├── 01-entra-id-custom-domain-add.png
-    ├── 02-entra-id-custom-domain-txt-record.png
-    ├── 03-entra-id-custom-domain-portal.png
-    ├── 04-dns-registrar-records.png
-    ├── 05-dns-registrar-txt-record-add.png
-    ├── 06-entra-id-custom-domain-verify.png
-    ├── 07-intune-dns-cname-records.png
-    ├── 08-entra-id-app-registration-new.png
-    ├── 09-entra-id-app-registration-redirect-uri.png
-    ├── 10-entra-id-client-secret-new.png
-    ├── 11-entra-id-client-secret-value.png
-    ├── 12-entra-id-client-secret-overview.png
-    ├── 13-entra-id-api-permissions-add.png
-    ├── 14-entra-id-api-permissions-graph-intune.png
-    ├── 15-aruba-central-intune-extension-menu.png
-    ├── 16-aruba-central-intune-extension-install.png
-    ├── 17-aruba-central-intune-extension-config.png
-    ├── 18-aruba-central-nac-identity-store-oauth-token.png
-    ├── 19-aruba-central-nac-identity-management-menu.png
-    ├── 20-aruba-central-nac-identity-store-create.png
-    ├── 21-aruba-central-nac-identity-store-define-name.png
-    ├── 22-entra-id-enterprise-app-redirect-uri.png
-    ├── 23-entra-id-redirect-uri-add.png
-    ├── 24-entra-id-redirect-uri-configured.png
-    ├── 25-entra-id-redirect-uri-confirmed.png
-    ├── 26-aruba-central-nac-roles-create.png
-    ├── 27-aruba-central-nac-roles-list.png
-    ├── 28-aruba-central-nac-roles-scope.png
-    ├── 29-aruba-central-nac-global-policy.png
-    ├── 30-aruba-central-nac-policy-rules.png
-    ├── 31-aruba-central-nac-policy-roles-rules.png
-    ├── 32-aruba-central-ssid-profile-create.png
-    ├── 33-aruba-central-ssid-profile-config.png
-    ├── 34-aruba-central-ssid-profile-device-scope.png
-    ├── 35-aruba-central-nac-authorization-policy-create.png
-    ├── 36-aruba-central-nac-authorization-policy-config1.png
-    ├── 37-aruba-central-nac-authorization-policy-config2.png
-    ├── 38-aruba-central-nac-auth-profile-create.png
-    ├── 39-aruba-central-nac-auth-profile-config1.png
-    ├── 40-aruba-central-nac-auth-profile-config2.png
-    ├── 41-aruba-central-nac-auth-profile-config3.png
-    ├── 42-aruba-central-nac-uem-intune-green.png
-    ├── 43-aruba-central-nac-scep-url.png
-    ├── 44-aruba-central-nac-scep-certificate-download.png
-    ├── 45-intune-trusted-certificate-create.png
-    ├── 46-intune-trusted-certificate-name.png
-    ├── 47-intune-trusted-certificate-import.png
-    ├── 48-intune-trusted-certificate-assign-users-devices.png
-    ├── 49-intune-trusted-certificate-review-create.png
-    ├── 50-intune-scep-certificate-profile-create.png
-    ├── 51-intune-scep-certificate-config1.png
-    ├── 52-intune-scep-certificate-config2.png
-    ├── 53-intune-scep-certificate-config3.png
-    ├── 54-intune-scep-certificate-scep-url.png
-    ├── 55-intune-scep-certificate-scep-url-detail.png
-    ├── 56-intune-wifi-profile-windows-create.png
-    ├── 57-intune-wifi-profile-windows-config1.png
-    ├── 58-intune-wifi-profile-windows-config2.png
-    ├── 59-intune-wifi-profile-windows-config3.png
-    ├── 60-intune-wifi-profile-windows-config4.png
-    ├── 61-intune-wifi-profile-windows-config5.png
-    ├── 62-intune-wifi-profile-windows-config6.png
-    ├── 63-test-certmgr-root-user-certificate.png
-    ├── 64-test-certmgr-certificates-detail1.png
-    ├── 65-test-certmgr-certificates-detail2.png
-    ├── 66-test-windows-wifi-ssid-known-networks.png
-    ├── 67-test-windows-wifi-connect-certificate.png
-    ├── 68-test-aruba-central-nac-monitoring-clients.png
-    ├── 69-test-aruba-central-nac-monitoring-clients-list.png
-    └── 70-test-aruba-central-nac-client-detail.png
+├── README.md                           ← Index général / General index
+├── windows/
+│   ├── README.md                       ← Ce fichier / This file
+│   └── screenshots/
+│       ├── 00-aruba-central-nac-banner.png
+│       ├── 01-entra-id-custom-domain-add.png
+│       ├── ...
+│       └── 70-test-aruba-central-nac-client-detail.png
+├── macos/
+│   ├── README.md                       ← Guide macOS (EN)
+│   ├── README-fr.md                    ← Guide macOS (FR)
+│   └── screenshots/                    ← Captures 71 → 130
+│       └── fr/                         ← Captures FR
+└── ios/
+    ├── README.md                       ← Guide iOS (EN) — à venir
+    ├── README-fr.md                    ← Guide iOS (FR) — à venir
+    └── screenshots/                    ← À venir
 ```
 
 ---
