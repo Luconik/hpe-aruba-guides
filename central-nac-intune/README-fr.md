@@ -13,17 +13,16 @@
 
 - [Présentation](#présentation)
 - [Prérequis](#prérequis)
-- [Partie 1 — Microsoft Entra ID](#partie-1--microsoft-entra-id)
-- [Partie 2 — Aruba Central — Extension Intune](#partie-2--aruba-central--extension-intune)
-- [Partie 3 — Configuration Aruba Central NAC](#partie-3--configuration-aruba-central-nac)
-- [Partie 4 — Validation](#partie-4--validation)
+- [Partie 1 — Aruba Central — Extension Intune](#partie-1--aruba-central--extension-intune)
+- [Partie 2 — Configuration Aruba Central NAC](#partie-2--configuration-aruba-central-nac)
+- [Partie 3 — Validation](#partie-3--validation)
 - [Références](#références)
 
 ---
 
 ## Présentation
 
-Ce guide couvre la configuration **Aruba Central NAC** pour l'authentification Wi-Fi EAP-TLS par certificat avec Microsoft Intune comme UEM — App Registration Entra ID, identity store NAC, rôles, politiques d'autorisation, SSID et configuration SCEP.
+Ce guide couvre la configuration **Aruba Central NAC** pour l'authentification Wi-Fi EAP-TLS par certificat avec Microsoft Intune comme UEM — identity store NAC, rôles, politiques d'autorisation, SSID et configuration SCEP.
 
 ```
 Endpoint (géré par Intune — Windows / macOS / iOS)
@@ -51,8 +50,13 @@ Accès réseau accordé (rôle assigné par la politique NAC)
 
 ## Prérequis
 
+> [!IMPORTANT]
+> **Compléter les prérequis avant de commencer ce guide.**
+> L'App Registration Entra ID (Tenant ID, Client ID, Client Secret) est nécessaire pour configurer l'extension Intune dans Aruba Central et l'identity store OAuth NAC.
+> → [microsoft-intune / prerequisites](https://github.com/Luconik/microsoft-intune/tree/main/prerequisites)
+
 - Workspace **HPE GreenLake** actif avec **Aruba Central** déployé
-- Tenant **Microsoft Entra ID** avec droits Global Admin
+- App Registration **Microsoft Entra ID** configurée — voir [microsoft-intune / prerequisites](https://github.com/Luconik/microsoft-intune/tree/main/prerequisites)
 - Licence **Microsoft Intune** active
 - Domaine DNS personnalisé vérifié dans Entra ID
 - Points d'accès Aruba gérés dans Aruba Central
@@ -67,93 +71,9 @@ Accès réseau accordé (rôle assigné par la politique NAC)
 
 ---
 
-## Partie 1 — Microsoft Entra ID
+## Partie 1 — Aruba Central — Extension Intune
 
-### 1.1 Ajouter et vérifier un domaine personnalisé
-
-Naviguer vers :
-```
-Entra ID → Domaines personnalisés → + Ajouter un domaine personnalisé
-```
-
-<p align="center"><img src="screenshots/01-entra-id-custom-domain-add.png" alt="Entra - Ajouter un domaine" width="900"/></p>
-
-Ajouter l'enregistrement TXT de vérification chez le registrar DNS.
-
-<p align="center"><img src="screenshots/02-entra-id-custom-domain-txt-record.png" alt="Entra - Enregistrement TXT de vérification" width="900"/></p>
-
-<p align="center"><img src="screenshots/03-entra-id-custom-domain-portal.png" alt="Entra - Domaine dans le portail" width="900"/></p>
-
-<p align="center"><img src="screenshots/04-dns-registrar-records.png" alt="DNS - Enregistrements registrar" width="900"/></p>
-
-<p align="center"><img src="screenshots/05-dns-registrar-txt-record-add.png" alt="DNS - Ajout enregistrement TXT" width="900"/></p>
-
-Retourner dans Entra ID et cliquer **Vérifier**.
-
-<p align="center"><img src="screenshots/06-entra-id-custom-domain-verify.png" alt="Entra - Vérification du domaine" width="900"/></p>
-
----
-
-### 1.2 Vérifier les enregistrements DNS CNAME pour Intune
-
-Requis pour l'enrôlement automatique des appareils dans Intune.
-
-<p align="center"><img src="screenshots/07-intune-dns-cname-records.png" alt="Intune - Enregistrements DNS CNAME" width="900"/></p>
-
----
-
-### 1.3 Créer une App Registration
-
-Naviguer vers :
-```
-Entra ID → Inscriptions d'applications → + Nouvelle inscription
-```
-
-<p align="center"><img src="screenshots/08-entra-id-app-registration-new.png" alt="Entra - Nouvelle inscription d'application" width="900"/></p>
-
-Configurer l'URI de redirection.
-
-<p align="center"><img src="screenshots/09-entra-id-app-registration-redirect-uri.png" alt="Entra - URI de redirection" width="900"/></p>
-
-> [!NOTE]
-> Conserver l'**ID d'application (client)** et l'**ID de l'annuaire (tenant)** — ils sont requis lors de la configuration de l'extension Intune dans Aruba Central et de l'identity store OAuth NAC.
-
----
-
-### 1.4 Créer un Client Secret
-
-Naviguer vers :
-```
-Application → Certificats et secrets → + Nouveau secret client
-```
-
-<p align="center"><img src="screenshots/10-entra-id-client-secret-new.png" alt="Entra - Nouveau secret client" width="900"/></p>
-
-> [!WARNING]
-> Copier la **valeur** du secret immédiatement — elle ne sera plus visible après fermeture de cette page.
-
-<p align="center"><img src="screenshots/11-entra-id-client-secret-value.png" alt="Entra - Valeur du secret client" width="900"/></p>
-
-<p align="center"><img src="screenshots/12-entra-id-client-secret-overview.png" alt="Entra - Vue d'ensemble secret client" width="900"/></p>
-
----
-
-### 1.5 Ajouter les permissions API
-
-Naviguer vers :
-```
-Application → Autorisations API → + Ajouter une autorisation → Microsoft Graph → Intune
-```
-
-<p align="center"><img src="screenshots/13-entra-id-api-permissions-add.png" alt="Entra - Ajout permissions API" width="900"/></p>
-
-<p align="center"><img src="screenshots/14-entra-id-api-permissions-graph-intune.png" alt="Entra - Permissions Graph + Intune" width="900"/></p>
-
----
-
-## Partie 2 — Aruba Central — Extension Intune
-
-### 2.1 Installer l'extension Microsoft Intune
+### 1.1 Installer l'extension Microsoft Intune
 
 Naviguer vers :
 ```
@@ -166,23 +86,23 @@ Aruba Central → Extensions → Available Extensions → Microsoft Intune → I
 
 ---
 
-### 2.2 Configurer l'extension Intune
+### 1.2 Configurer l'extension Intune
 
-Renseigner les informations de l'App Registration :
+Renseigner les informations de l'App Registration issues des prérequis :
 
 | Champ | Valeur |
 |---|---|
 | Tenant ID | Depuis la vue d'ensemble Entra ID |
 | Client ID | ID d'application (client) |
-| Client Secret | Valeur copiée à l'étape 1.4 |
+| Client Secret | Valeur de l'étape 0.4 des prérequis |
 
 <p align="center"><img src="screenshots/17-aruba-central-intune-extension-config.png" alt="Central - Configuration extension Intune" width="900"/></p>
 
 ---
 
-## Partie 3 — Configuration Aruba Central NAC
+## Partie 2 — Configuration Aruba Central NAC
 
-### 3.1 Configurer l'Identity Store OAuth
+### 2.1 Configurer l'Identity Store OAuth
 
 Naviguer vers :
 ```
@@ -211,7 +131,7 @@ Valider le token OAuth dans Central NAC.
 
 ---
 
-### 3.2 Créer les rôles NAC
+### 2.2 Créer les rôles NAC
 
 Naviguer vers :
 ```
@@ -226,7 +146,7 @@ Central NAC → Configuration → Roles → Create Role
 
 ---
 
-### 3.3 Configurer la politique globale NAC
+### 2.3 Configurer la politique globale NAC
 
 Naviguer vers :
 ```
@@ -241,7 +161,7 @@ Central NAC → Configuration → Policies → Global Policy
 
 ---
 
-### 3.4 Créer le profil SSID 802.1X
+### 2.4 Créer le profil SSID 802.1X
 
 Naviguer vers :
 ```
@@ -258,7 +178,7 @@ Configurer le SSID en mode **WPA3-Enterprise / 802.1X**.
 
 ---
 
-### 3.5 Créer la politique d'autorisation
+### 2.5 Créer la politique d'autorisation
 
 Naviguer vers :
 ```
@@ -273,7 +193,7 @@ Central NAC → Configuration → Authorization Policies → Create
 
 ---
 
-### 3.6 Créer le profil d'authentification EAP-TLS
+### 2.6 Créer le profil d'authentification EAP-TLS
 
 Naviguer vers :
 ```
@@ -292,7 +212,7 @@ Configurer avec **EAP-TLS** et l'Identity Store Intune.
 
 ---
 
-### 3.7 Vérifier la connexion UEM Intune
+### 2.7 Vérifier la connexion UEM Intune
 
 La connexion Intune doit afficher le statut **vert** dans Central NAC.
 
@@ -300,7 +220,7 @@ La connexion Intune doit afficher le statut **vert** dans Central NAC.
 
 ---
 
-### 3.8 Récupérer l'URL SCEP et le certificat CA racine
+### 2.8 Récupérer l'URL SCEP et le certificat CA racine
 
 Naviguer vers :
 ```
@@ -318,7 +238,7 @@ Télécharger le certificat CA racine — nécessaire pour le profil Trusted Cer
 
 ---
 
-## Partie 4 — Validation
+## Partie 3 — Validation
 
 Naviguer vers :
 ```
@@ -367,6 +287,7 @@ Pour chaque plateforme, le détail du client doit afficher :
 - [Aruba Central Documentation](https://www.arubanetworks.com/techdocs/central/latest/content/)
 - [Microsoft Intune — Profils de certificat SCEP](https://learn.microsoft.com/fr-fr/mem/intune/protect/certificates-scep-configure)
 - [Microsoft Entra ID — App Registration](https://learn.microsoft.com/fr-fr/entra/identity-platform/quickstart-register-app)
+- [microsoft-intune / prerequisites](https://github.com/Luconik/microsoft-intune/tree/main/prerequisites) — App Registration Entra ID + APNs
 - [microsoft-intune / eap-tls](https://github.com/Luconik/microsoft-intune/tree/main/eap-tls) — Profils Intune + enrollment par plateforme
 
 ---
@@ -379,7 +300,7 @@ central-nac-intune/
 ├── README-fr.md            ← Ce fichier (FR)
 └── screenshots/
     ├── 00-aruba-central-nac-banner.png
-    ├── 01-entra-id-custom-domain-add.png
+    ├── 15-aruba-central-intune-extension-menu.png
     ├── ...
     ├── 44-aruba-central-nac-scep-certificate-download.png
     ├── 68-test-aruba-central-nac-monitoring-clients.png
@@ -387,9 +308,6 @@ central-nac-intune/
     ├── 70-test-aruba-central-nac-client-detail.png
     ├── 124-central-nac-clients-accepted.png
     ├── 125-central-nac-client-detail-eap-tls.png
-    ├── 129-central-nac-confirm-connection.png
-    ├── 130-central-nac-clients-adelev-fr.png
-    ├── 131-central-nac-client-detail-adelev-fr.png
     ├── 221-central-nac-monitoring-global.png
     ├── 222-central-nac-clients-accepted.png
     └── 223-central-nac-client-detail-accepted.png
