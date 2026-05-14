@@ -195,8 +195,6 @@ Dans la section **"Certificats SAML"**, télécharger le **XML de métadonnées 
 
 ![Entra - Certificat SAML](screenshots/20_entra_saml_certificate.png)
 
-> ⚠️ Cette image peut contenir des données personnelles — à flouter avant publication.
-
 Ce fichier sera chargé lors de la configuration de la connexion SSO côté GreenLake (étape 2.3).
 
 ---
@@ -583,7 +581,7 @@ greenlake-sso/
     ├── 03_entra_create_app.png
     ├── 04_entra_app_overview.png
     ├── 05_entra_users_groups_empty.png
-    ├── 06_entra_users_select.png            ← ⚠️ à flouter (email perso visible)
+    ├── 06_entra_users_select.png          
     ├── 07_entra_users_assign.png
     ├── 08_entra_users_assigned.png
     ├── 09_entra_sso_select_saml.png
@@ -597,7 +595,7 @@ greenlake-sso/
     ├── 17_entra_hpe_ccs_attribute.png
     ├── 18_entra_hpe_ccs_group_select.png
     ├── 19_entra_attributes_final.png
-    ├── 20_entra_saml_certificate.png        ← ⚠️ à flouter (email perso visible)
+    ├── 20_entra_saml_certificate.png        
     ├── 21_gl_manage_workspace_enterprise.png
     ├── 22_gl_enable_enterprise_modal.png
     ├── 23_gl_manage_workspace_domains.png
