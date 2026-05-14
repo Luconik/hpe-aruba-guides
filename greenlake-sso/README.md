@@ -83,8 +83,6 @@ Sélectionner les utilisateurs ou groupes à autoriser, puis cliquer **Sélectio
 
 ![Entra - Sélection utilisateurs](screenshots/06_entra_users_select.png)
 
-> ⚠️ Cette image contient des données personnelles — à flouter avant publication.
-
 ![Entra - Attribution en cours](screenshots/07_entra_users_assign.png)
 
 ![Entra - Utilisateurs attribués](screenshots/08_entra_users_assigned.png)
