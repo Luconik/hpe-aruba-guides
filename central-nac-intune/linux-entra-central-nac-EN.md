@@ -74,49 +74,49 @@ intune-portal
 
 The **Intune Agent** welcome screen appears. Click **Sign in**.
 
-![Intune Agent — welcome screen](intune-portal-accueil.png)
+![Intune Agent — welcome screen](screenshots/intune-portal-accueil.png)
 
 ### Entra ID Authentication
 
 The Microsoft Sign in window opens. Enter the organizational account email address and click **Next**.
 
-![Microsoft Sign in — email entry](intune-portal-signin-email.png)
+![Microsoft Sign in — email entry](screenshots/intune-portal-signin-email.png)
 
 Enter the account password and click **Sign in**.
 
-![Microsoft Authentication — password entry](intune-portal-signin-password.png)
+![Microsoft Authentication — password entry](screenshots/intune-portal-signin-password.png)
 
 ### Device Registration (MFA)
 
 If a Conditional Access policy is in place, a **"Help us keep your device secure"** step appears. Click **Register**.
 
-![Microsoft Authentication — device registration](intune-portal-register-device.png)
+![Microsoft Authentication — device registration](screenshots/intune-portal-register-device.png)
 
 If MFA is enabled on the account, enter the code displayed in the **Microsoft Authenticator** app and click **Verify**.
 
-![Microsoft Authentication — MFA code](intune-portal-mfa.png)
+![Microsoft Authentication — MFA code](screenshots/intune-portal-mfa.png)
 
 ### Company Portal — Access Setup
 
 After authentication, the portal displays the **Set up access** screen. Click **Begin**.
 
-![Company Portal — Set up access](intune-portal-configurer-acces.png)
+![Company Portal — Set up access](screenshots/intune-portal-configurer-acces.png)
 
 The next screen shows what information your organization can see on the device. Click **Begin** to confirm consent.
 
-![Company Portal — organization consent](intune-portal-consentement.png)
+![Company Portal — organization consent](screenshots/intune-portal-consentement.png)
 
 ### Enrollment in Progress
 
 Enrollment starts automatically. The **Registering your device** screen appears for a few seconds.
 
-![Company Portal — enrollment in progress](intune-portal-enrollment-progress.png)
+![Company Portal — enrollment in progress](screenshots/intune-portal-enrollment-progress.png)
 
 ### Post-enrollment Result
 
 Once enrollment is complete, the app displays the device card with its name, manufacturer, and operating system.
 
-![Company Portal — enrolled device](intune-portal-enrolled.png)
+![Company Portal — enrolled device](screenshots/intune-portal-enrolled.png)
 
 > **Note**: The **"Unable to verify status"** message is normal at this stage — no compliance policy has been assigned yet. This corresponds to the IWS 500 error visible in the logs, and has no impact on enrollment.
 
@@ -128,7 +128,7 @@ Once enrollment is complete, the app displays the device card with its name, man
 
 In the **Microsoft Intune admin center**, navigate to **Devices > Linux devices**.
 
-![Intune admin center — Linux devices list](intune-linux-devices-list.png)
+![Intune admin center — Linux devices list](screenshots/intune-linux-devices-list.png)
 
 | Field | Value |
 |---|---|
@@ -142,7 +142,7 @@ In the **Microsoft Intune admin center**, navigate to **Devices > Linux devices*
 
 Click on the device name to view its details:
 
-![Intune admin center — device detail](intune-linux-device-detail.png)
+![Intune admin center — device detail](screenshots/intune-linux-device-detail.png)
 
 ---
 
@@ -150,7 +150,7 @@ Click on the device name to view its details:
 
 **Intune offers no native configuration profiles for Linux.** Navigating to **Devices > Configuration > Create > Linux**, the *Profile type* menu shows **No available items**.
 
-![Intune — No available items for Linux](intune-linux-no-profile.png)
+![Intune — No available items for Linux](screenshots/intune-linux-no-profile.png)
 
 | Feature | Windows | macOS | iOS | Linux |
 |---|---|---|---|---|
@@ -214,11 +214,11 @@ The infrastructure configuration steps are:
 
 From the New Central dashboard, navigate to **Global > Network Overview**, then click the configuration icon (gear icon) in the top right.
 
-![Network Overview — access to configuration](dashboard-central-roue.png)
+![Network Overview — access to configuration](screenshots/dashboard-central-roue.png)
 
 In the left menu, select **Library**, then navigate to **Profiles Management > Wireless > WLAN** and click **Manage**.
 
-![Library — Profiles Management WLAN](library-WLAN-Manage.png)
+![Library — Profiles Management WLAN](screenshots/library-WLAN-Manage.png)
 
 Click **Create Profile** and fill in the following parameters:
 
@@ -231,7 +231,7 @@ Click **Create Profile** and fill in the following parameters:
 | Key Management | `Enhanced Open` |
 | Captive Portal Type | `Central NAC` |
 
-![WLAN profile creation](WLAN-Creation.png)
+![WLAN profile creation](screenshots/WLAN-Creation.png)
 
 > **Note:** Security Level `Open` with Key Management `Enhanced Open` (OWE) provides opportunistic encryption without a pre-shared key, suitable for a captive portal.
 
@@ -251,9 +251,9 @@ Create or edit a profile with the following parameters:
 | Theme | `Use system default theme` |
 | Overrides | `None` |
 
-![Portal Profile — Sign-in configuration](dashboard-centralnac-portal-profile.png)
+![Portal Profile — Sign-in configuration](screenshots/dashboard-centralnac-portal-profile.png)
 
-![Portal Profile — full configuration](dashboard-centralnac-portal-profile-2.png)
+![Portal Profile — full configuration](screenshots/dashboard-centralnac-portal-profile-2.png)
 
 > **Note:** Enabling "Require user to accept terms" requires the user to check the terms and conditions before authenticating.
 
@@ -274,11 +274,11 @@ Select the `Luconik_Captive_Portal` profile or create a new one with the followi
 | Identity Stores | `Luconik_Visitor`, `Luconik_EntraID` |
 | Allow users to register an account | Enabled |
 
-![Authentication Profile — Captive Portal configuration](Centralnac-authenticationprofiles-captiveportal.png)
+![Authentication Profile — Captive Portal configuration](screenshots/Centralnac-authenticationprofiles-captiveportal.png)
 
 The selected Identity Stores allow authentication via Entra ID (`Luconik_EntraID`) or via a local guest account (`Luconik_Visitor`).
 
-![Authentication Profile — Identity Store selection](Centralnac-authenticationprofiles-captiveportal-identitystore.png)
+![Authentication Profile — Identity Store selection](screenshots/Centralnac-authenticationprofiles-captiveportal-identitystore.png)
 
 At the bottom of the panel, configure the additional parameters:
 
@@ -289,7 +289,7 @@ At the bottom of the panel, configure the additional parameters:
 | Expire registered accounts after | `1 day` |
 | Portal Customization | `Luconik_Portal_Profiles_Entra` |
 
-![Authentication Profile — Portal Customization and Portal URL](dashboard-centralnac-AP-Manage.png)
+![Authentication Profile — Portal Customization and Portal URL](screenshots/dashboard-centralnac-AP-Manage.png)
 
 Click **Save**.
 
@@ -301,11 +301,11 @@ Click **Save**.
 
 In the system notification bar, click the **Wi-Fi** button and select the `Luconik-invite` network from the list of available networks.
 
-![Wi-Fi network selection — Luconik-invite](wifi-selection.png)
+![Wi-Fi network selection — Luconik-invite](screenshots/wifi-selection.png)
 
 A system notification appears confirming the connection to the network.
 
-![Network connection notification](wifi-notification.png)
+![Network connection notification](screenshots/wifi-notification.png)
 
 ### Captive Portal Authentication
 
@@ -315,7 +315,7 @@ The browser opens automatically on the captive portal. Three authentication meth
 - **Register**: to create a guest account
 - **Sign in with Luconik_EntraID**: authentication via the organization's Microsoft Entra ID account
 
-![Captive portal — sign-in page](captive-portal-login.png)
+![Captive portal — sign-in page](screenshots/captive-portal-login.png)
 
 Click **Sign in with Luconik_EntraID**.
 
@@ -323,27 +323,27 @@ Click **Sign in with Luconik_EntraID**.
 
 If the Portal Profile is configured with terms acceptance, an intermediate page is displayed. Check **I accept the terms and conditions** and click **Accept**.
 
-![Terms and conditions — acceptance](captive-portal-terms.png)
+![Terms and conditions — acceptance](screenshots/captive-portal-terms.png)
 
 ### Entra ID Authentication
 
 The Microsoft page appears. Select the organizational account or enter one manually.
 
-![Microsoft — account selection](entra-account-select.png)
+![Microsoft — account selection](screenshots/entra-account-select.png)
 
 Enter the Microsoft account password and click **Sign in**.
 
-![Microsoft — password entry](entra-password.png)
+![Microsoft — password entry](screenshots/entra-password.png)
 
 If a "Stay signed in?" prompt appears, click **Yes** to reduce reconnection prompts in future sessions.
 
-![Microsoft — stay signed in](entra-stay-connected.png)
+![Microsoft — stay signed in](screenshots/entra-stay-connected.png)
 
 ### Network Access
 
 Once authentication is successful, the browser redirects to the default web page configured in the Portal Profile. Internet access is granted.
 
-![Internet access confirmed](access-confirmed.png)
+![Internet access confirmed](screenshots/access-confirmed.png)
 
 ---
 
@@ -353,7 +353,7 @@ Once authentication is successful, the browser redirects to the default web page
 
 Navigate to **Global > Central NAC > Monitor > Clients** to view the list of authenticated clients.
 
-![NAC Clients — active connections list](centralnac-clients-list.png)
+![NAC Clients — active connections list](screenshots/centralnac-clients-list.png)
 
 The user's session should appear with status **Accepted**, connection type **Wireless**, and WLAN **Luconik-invite**.
 
@@ -367,6 +367,6 @@ Click on a client to view the session detail and verify:
 - **Identity Store**: `Luconik_EntraID`
 - **Assigned Role**: role assigned by the authorization policy
 
-![NAC Client — session detail](centralnac-client-detail.png)
+![NAC Client — session detail](screenshots/centralnac-client-detail.png)
 
 The connectivity diagram confirms the path: user → SSID → AP → Central NAC.

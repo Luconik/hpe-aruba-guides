@@ -74,49 +74,49 @@ intune-portal
 
 L'écran d'accueil **Agent Intune** s'affiche. Cliquer sur **Se connecter**.
 
-![Agent Intune — écran d'accueil](intune-portal-accueil.png)
+![Agent Intune — écran d'accueil](screenshots/intune-portal-accueil.png)
 
 ### Authentification Entra ID
 
 La fenêtre Microsoft Sign in s'ouvre. Saisir l'adresse email du compte organisationnel et cliquer sur **Next**.
 
-![Microsoft Sign in — saisie de l'email](intune-portal-signin-email.png)
+![Microsoft Sign in — saisie de l'email](screenshots/intune-portal-signin-email.png)
 
 Saisir le mot de passe du compte et cliquer sur **Sign in**.
 
-![Microsoft Authentication — saisie du mot de passe](intune-portal-signin-password.png)
+![Microsoft Authentication — saisie du mot de passe](screenshots/intune-portal-signin-password.png)
 
 ### Enregistrement du device (MFA)
 
 Si une politique d'accès conditionnel est en place, une étape **"Help us keep your device secure"** s'affiche. Cliquer sur **Register**.
 
-![Microsoft Authentication — enregistrement du device](intune-portal-register-device.png)
+![Microsoft Authentication — enregistrement du device](screenshots/intune-portal-register-device.png)
 
 Si le MFA est activé sur le compte, saisir le code affiché dans l'application **Microsoft Authenticator** et cliquer sur **Verify**.
 
-![Microsoft Authentication — code MFA](intune-portal-mfa.png)
+![Microsoft Authentication — code MFA](screenshots/intune-portal-mfa.png)
 
 ### Portail Company — Configuration de l'accès
 
 Après authentification, le portail affiche l'écran **Configurer l'accès**. Cliquer sur **Commencer**.
 
-![Portail Company — Configurer l'accès](intune-portal-configurer-acces.png)
+![Portail Company — Configurer l'accès](screenshots/intune-portal-configurer-acces.png)
 
 L'écran suivant présente les informations que l'organisation peut consulter sur l'appareil. Cliquer sur **Commencer** pour confirmer le consentement.
 
-![Portail Company — consentement organisation](intune-portal-consentement.png)
+![Portail Company — consentement organisation](screenshots/intune-portal-consentement.png)
 
 ### Enrollment en cours
 
 L'enrollment démarre automatiquement. L'écran **Enregistrement de votre appareil** s'affiche pendant quelques secondes.
 
-![Portail Company — enregistrement en cours](intune-portal-enrollment-progress.png)
+![Portail Company — enregistrement en cours](screenshots/intune-portal-enrollment-progress.png)
 
 ### Résultat post-enrollment
 
 Une fois l'enrollment terminé, l'application affiche la fiche de l'appareil avec son nom, son fabricant et son système d'exploitation.
 
-![Portail Company — appareil enregistré](intune-portal-enrolled.png)
+![Portail Company — appareil enregistré](screenshots/intune-portal-enrolled.png)
 
 > **Note** : L'état **"Impossible de vérifier l'état"** est normal à ce stade — aucune politique de conformité n'est encore assignée. Cette erreur correspond à l'erreur IWS 500 visible dans les logs, sans impact sur l'enrollment.
 
@@ -128,7 +128,7 @@ Une fois l'enrollment terminé, l'application affiche la fiche de l'appareil ave
 
 Dans le **Microsoft Intune admin center**, naviguer vers **Devices > Linux devices**.
 
-![Intune admin center — Linux devices list](intune-linux-devices-list.png)
+![Intune admin center — Linux devices list](screenshots/intune-linux-devices-list.png)
 
 | Champ | Valeur |
 |---|---|
@@ -142,7 +142,7 @@ Dans le **Microsoft Intune admin center**, naviguer vers **Devices > Linux devic
 
 Cliquer sur le nom de l'appareil pour afficher le détail :
 
-![Intune admin center — détail de l'appareil](intune-linux-device-detail.png)
+![Intune admin center — détail de l'appareil](screenshots/intune-linux-device-detail.png)
 
 ---
 
@@ -150,7 +150,7 @@ Cliquer sur le nom de l'appareil pour afficher le détail :
 
 **Intune ne propose aucun profil de configuration natif pour Linux.** En naviguant vers **Devices > Configuration > Create > Linux**, le menu *Profile type* indique **No available items**.
 
-![Intune — No available items pour Linux](intune-linux-no-profile.png)
+![Intune — No available items pour Linux](screenshots/intune-linux-no-profile.png)
 
 | Fonctionnalité | Windows | macOS | iOS | Linux |
 |---|---|---|---|---|
@@ -214,11 +214,11 @@ Les étapes de configuration côté infrastructure sont :
 
 Depuis le dashboard New Central, naviguer vers **Global > Network Overview**, puis cliquer sur l'icône de configuration (roue crantée) en haut à droite.
 
-![Network Overview — accès à la configuration](dashboard-central-roue.png)
+![Network Overview — accès à la configuration](screenshots/dashboard-central-roue.png)
 
 Dans le menu de gauche, sélectionner **Library**, puis naviguer vers **Profiles Management > Wireless > WLAN** et cliquer sur **Manage**.
 
-![Library — Profiles Management WLAN](library-WLAN-Manage.png)
+![Library — Profiles Management WLAN](screenshots/library-WLAN-Manage.png)
 
 Cliquer sur **Create Profile** et renseigner les paramètres suivants :
 
@@ -231,7 +231,7 @@ Cliquer sur **Create Profile** et renseigner les paramètres suivants :
 | Key Management | `Enhanced Open` |
 | Captive Portal Type | `Central NAC` |
 
-![Création du profil WLAN](WLAN-Creation.png)
+![Création du profil WLAN](screenshots/WLAN-Creation.png)
 
 > **Note :** Le Security Level `Open` avec Key Management `Enhanced Open` (OWE) assure un chiffrement opportuniste sans pré-partage de clé, adapté à un portail captif.
 
@@ -251,9 +251,9 @@ Créer ou éditer un profil avec les paramètres suivants :
 | Theme | `Use system default theme` |
 | Overrides | `None` |
 
-![Portal Profile — configuration Sign-in](dashboard-centralnac-portal-profile.png)
+![Portal Profile — configuration Sign-in](screenshots/dashboard-centralnac-portal-profile.png)
 
-![Portal Profile — configuration complète](dashboard-centralnac-portal-profile-2.png)
+![Portal Profile — configuration complète](screenshots/dashboard-centralnac-portal-profile-2.png)
 
 > **Note :** L'activation de "Require user to accept terms" impose à l'utilisateur de cocher les conditions générales avant de pouvoir s'authentifier.
 
@@ -274,11 +274,11 @@ Sélectionner le profil `Luconik_Captive_Portal` ou en créer un nouveau avec le
 | Identity Stores | `Luconik_Visitor`, `Luconik_EntraID` |
 | Allow users to register an account | Activé |
 
-![Authentication Profile — configuration Captive Portal](Centralnac-authenticationprofiles-captiveportal.png)
+![Authentication Profile — configuration Captive Portal](screenshots/Centralnac-authenticationprofiles-captiveportal.png)
 
 Les Identity Stores sélectionnés permettent l'authentification via Entra ID (`Luconik_EntraID`) ou via un compte visiteur local (`Luconik_Visitor`).
 
-![Authentication Profile — sélection des Identity Stores](Centralnac-authenticationprofiles-captiveportal-identitystore.png)
+![Authentication Profile — sélection des Identity Stores](screenshots/Centralnac-authenticationprofiles-captiveportal-identitystore.png)
 
 En bas du panneau, configurer les paramètres complémentaires :
 
@@ -289,7 +289,7 @@ En bas du panneau, configurer les paramètres complémentaires :
 | Expire registered accounts after | `1 day` |
 | Portal Customization | `Luconik_Portal_Profiles_Entra` |
 
-![Authentication Profile — Portal Customization et Portal URL](dashboard-centralnac-AP-Manage.png)
+![Authentication Profile — Portal Customization et Portal URL](screenshots/dashboard-centralnac-AP-Manage.png)
 
 Cliquer sur **Save**.
 
@@ -301,11 +301,11 @@ Cliquer sur **Save**.
 
 Dans la barre de notifications système, cliquer sur le bouton **Wi-Fi** et sélectionner le réseau `Luconik-invite`.
 
-![Sélection du réseau Wi-Fi Luconik-invite](wifi-selection.png)
+![Sélection du réseau Wi-Fi Luconik-invite](screenshots/wifi-selection.png)
 
 Une notification système apparaît confirmant la connexion au réseau.
 
-![Notification de connexion au réseau](wifi-notification.png)
+![Notification de connexion au réseau](screenshots/wifi-notification.png)
 
 ### Authentification sur le portail captif
 
@@ -315,7 +315,7 @@ Le navigateur s'ouvre automatiquement sur le portail captif. Trois méthodes d'a
 - **S'inscrire** : pour créer un compte visiteur
 - **Se connecter avec Luconik_EntraID** : authentification via le compte Microsoft Entra ID de l'organisation
 
-![Portail captif — page de connexion](captive-portal-login.png)
+![Portail captif — page de connexion](screenshots/captive-portal-login.png)
 
 Cliquer sur **Se connecter avec Luconik_EntraID**.
 
@@ -323,27 +323,27 @@ Cliquer sur **Se connecter avec Luconik_EntraID**.
 
 Si le Portal Profile est configuré avec l'acceptation des conditions générales, une page intermédiaire s'affiche. Cocher **J'accepte les conditions générales** puis cliquer sur **Accepter**.
 
-![Conditions générales — acceptation](captive-portal-terms.png)
+![Conditions générales — acceptation](screenshots/captive-portal-terms.png)
 
 ### Authentification Entra ID
 
 La page Microsoft apparaît. Sélectionner le compte de l'organisation ou en saisir un manuellement.
 
-![Microsoft — sélection du compte](entra-account-select.png)
+![Microsoft — sélection du compte](screenshots/entra-account-select.png)
 
 Saisir le mot de passe du compte Microsoft et cliquer sur **Se connecter**.
 
-![Microsoft — saisie du mot de passe](entra-password.png)
+![Microsoft — saisie du mot de passe](screenshots/entra-password.png)
 
 Si une invite "Rester connecté ?" apparaît, cliquer sur **Oui** pour réduire les demandes de reconnexion lors des prochaines sessions.
 
-![Microsoft — rester connecté](entra-stay-connected.png)
+![Microsoft — rester connecté](screenshots/entra-stay-connected.png)
 
 ### Accès au réseau
 
 Une fois l'authentification réussie, le navigateur redirige vers la page web par défaut configurée dans le Portal Profile. L'accès Internet est accordé.
 
-![Accès Internet confirmé](access-confirmed.png)
+![Accès Internet confirmé](screenshots/access-confirmed.png)
 
 ---
 
@@ -353,7 +353,7 @@ Une fois l'authentification réussie, le navigateur redirige vers la page web pa
 
 Naviguer vers **Global > Central NAC > Monitor > Clients** pour consulter la liste des clients authentifiés.
 
-![NAC Clients — liste des connexions actives](centralnac-clients-list.png)
+![NAC Clients — liste des connexions actives](screenshots/centralnac-clients-list.png)
 
 La session de l'utilisateur doit apparaître avec le statut **Accepted**, le type de connexion **Wireless** et le WLAN **Luconik-invite**.
 
@@ -367,6 +367,6 @@ Cliquer sur un client pour afficher le détail de sa session et vérifier :
 - **Identity Store** : `Luconik_EntraID`
 - **Assigned Role** : rôle assigné par la politique d'autorisation
 
-![NAC Client — détail de la session](centralnac-client-detail.png)
+![NAC Client — détail de la session](screenshots/centralnac-client-detail.png)
 
 Le diagramme de connectivité confirme le chemin : utilisateur → SSID → AP → Central NAC.
