@@ -33,7 +33,6 @@ Ces guides sont issus d'expériences terrain et de labs personnels. Ils s'adress
 | [`greenlake-workspace/`](greenlake-workspace/) | Création d'un workspace HPE GreenLake + déploiement Aruba Central | ✅ |
 | [`greenlake-sso/`](greenlake-sso/) | Configuration SSO GreenLake avec Microsoft Entra ID (SAML 2.0) | ✅ |
 | [`central-nac-intune/`](central-nac-intune/) | Aruba Central NAC + Microsoft Intune — 802.1X EAP-TLS / SCEP | ✅ |
-
 | [`copilot-studio-mcp-agent/`](https://github.com/Luconik/hpe-aruba-guides/blob/main/copilot-studio-mcp-agent) | Agent Copilot Studio (Teams/M365) connecté à Aruba Central via MCP | ✅ |
 ---
 
@@ -98,7 +97,6 @@ This repository contains practical guides for **HPE Aruba Networking** solutions
 | [`greenlake-workspace/`](greenlake-workspace/) | HPE GreenLake workspace + Aruba Central deployment | ✅ |
 | [`greenlake-sso/`](greenlake-sso/) | GreenLake SSO with Microsoft Entra ID (SAML 2.0) | ✅ |
 | [`central-nac-intune/`](central-nac-intune/) | Aruba Central NAC + Microsoft Intune — 802.1X EAP-TLS / SCEP | ✅ |
-
 | [`copilot-studio-mcp-agent/`](https://github.com/Luconik/hpe-aruba-guides/blob/main/copilot-studio-mcp-agent) | Copilot Studio agent (Teams/M365) connected to Aruba Central via MCP | ✅ |
 ---
 
