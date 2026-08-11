@@ -29,6 +29,4 @@ It combines a coverage reference and an opportunity system to present a readable
 ## More documentation
 
 - [French page](README.md)
-- [Public working sheet](PUBLIC.md)
-- [Internal working sheet](INTERNAL.md)
 - [Agent captures](../../captures/opportunity-finder/)

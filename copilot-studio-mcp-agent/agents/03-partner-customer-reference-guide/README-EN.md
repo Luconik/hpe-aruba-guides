@@ -26,6 +26,4 @@ The public version should prioritize official accessible links and original or e
 ## More documentation
 
 - [French page](README.md)
-- [Public working sheet](PUBLIC.md)
-- [Internal working sheet](INTERNAL.md)
 - [Agent captures](../../captures/partner-customer-reference-guide/)

@@ -21,19 +21,10 @@ The screenshots have been redacted. The author’s name is intentionally retaine
 - Why sources, permissions, limitations and guardrails must be documented.
 - A complete workflow: configuration, testing, publishing, sharing and demonstration.
 
-## Screenshots and documentation
+## Screenshots
 
-Screenshots are grouped by agent in [`captures/`](captures/). Cross-cutting documentation is available in [`docs/`](docs/).
-
-- [Capture inventory](docs/capture-inventory.md)
-- [Anonymization policy](docs/anonymization.md)
-- [Pre-publication checklist](docs/publishing-checklist.md)
-- [Working structure](WORKING_STRUCTURE.md)
+Redacted screenshots are grouped by agent in [`captures/`](captures/).
 
 ## Français
 
 Read the [French version](README.md).
-
-## Yammer
-
-The [English HPEN Yammer post draft](docs/yammer-post-en.md) is ready for review.

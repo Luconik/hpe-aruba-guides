@@ -27,6 +27,4 @@ Aider à retrouver et synthétiser des informations techniques issues d’un cor
 
 ## Documentation complémentaire
 
-- [Fiche publique](PUBLIC.md)
-- [Fiche de travail](INTERNAL.md)
 - [Captures de l’agent](../../captures/presales-knowledge-advisor/)

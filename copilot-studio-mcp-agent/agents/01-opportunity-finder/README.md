@@ -28,8 +28,6 @@ Croiser un référentiel de couverture et un système d’opportunités afin de 
 
 ## Documentation complémentaire
 
-- [Fiche publique](PUBLIC.md)
-- [Fiche de travail](INTERNAL.md)
 - [Captures de l’agent](../../captures/opportunity-finder/)
 
 > Les détails CRM, les noms de connexions, les champs internes et les données commerciales restent hors de cette page publique.

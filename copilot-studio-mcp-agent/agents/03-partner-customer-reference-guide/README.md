@@ -25,6 +25,4 @@ La version publique doit privilégier des liens officiels accessibles et des doc
 
 ## Documentation complémentaire
 
-- [Fiche publique](PUBLIC.md)
-- [Fiche de travail](INTERNAL.md)
 - [Captures de l’agent](../../captures/partner-customer-reference-guide/)

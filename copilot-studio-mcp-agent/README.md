@@ -21,19 +21,10 @@ Les captures sont caviardées. Le nom de l’auteur est conservé pour attribuer
 - L’importance des sources, des droits, des limites et des garde-fous.
 - Une démarche complète : configuration, test, publication, partage et démonstration.
 
-## Captures et documentation
+## Captures
 
-Les captures sont regroupées par agent dans [`captures/`](captures/). Les pages transverses sont disponibles dans [`docs/`](docs/).
-
-- [Inventaire des captures](docs/capture-inventory.md)
-- [Politique d’anonymisation](docs/anonymization.md)
-- [Checklist avant publication](docs/publishing-checklist.md)
-- [Structure de travail](WORKING_STRUCTURE.md)
+Les captures caviardées sont regroupées par agent dans [`captures/`](captures/).
 
 ## English
 
 Read the [English version](README-EN.md).
-
-## Yammer
-
-The [English HPEN Yammer post draft](docs/yammer-post-en.md) is ready for review.

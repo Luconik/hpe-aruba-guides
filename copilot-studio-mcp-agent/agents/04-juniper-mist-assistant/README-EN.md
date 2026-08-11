@@ -22,5 +22,3 @@ This agent must be presented as an integration under evaluation, not as an opera
 ## More documentation
 
 - [French page](README.md)
-- [Public working sheet](PUBLIC.md)
-- [Internal working sheet](INTERNAL.md)

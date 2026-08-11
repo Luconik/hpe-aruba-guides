@@ -28,6 +28,4 @@ It helps retrieve and synthesize technical information from a curated knowledge 
 ## More documentation
 
 - [French page](README.md)
-- [Public working sheet](PUBLIC.md)
-- [Internal working sheet](INTERNAL.md)
 - [Agent captures](../../captures/presales-knowledge-advisor/)

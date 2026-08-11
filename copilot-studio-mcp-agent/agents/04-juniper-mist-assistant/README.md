@@ -20,6 +20,3 @@ Cet agent doit être présenté comme une intégration en évaluation, et non co
 - comportement de l’agent une fois la connexion établie.
 
 ## Documentation complémentaire
-
-- [Fiche publique](PUBLIC.md)
-- [Fiche de travail](INTERNAL.md)
